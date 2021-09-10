@@ -1,0 +1,123 @@
+/* Mobile First */
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: monospace;
+    color: rgb(24, 24, 24);
+}
+
+header {
+    border-bottom: 1px dotted rgb(29, 29, 29);
+}
+
+header h1 {
+    margin-top: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+main #player, #computer, #result {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+main #computer {
+    margin: 30px 0px 10px 0px;
+}
+
+main #secret {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 5rem;
+    color: rgb(146, 146, 146);
+}
+
+main ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+
+}
+
+main ul li {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.rockPaperScissors {
+    padding: 10px 0px 0px 0px;
+    color: rgb(51, 51, 51);
+}
+
+img {
+    width: 90px;
+    height: 90px;
+    object-fit: scale-down;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+li:hover {
+    box-shadow: 0px 0px 0px 1px #D5D5D5;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(24, 24, 24);
+}
+
+#resultTied {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: orange;
+}
+
+#resultWin {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: green;
+}
+
+#resultLose {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    ul {
+        width: 70%;
+        justify-content: space-around;
+    }
+    
+    img {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+    ul {
+        width: 70%;
+        justify-content: space-around;
+    }
+    
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
