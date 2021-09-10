@@ -54,17 +54,17 @@ function appendImage() {
 
     if (randomChoice === 'rock') {
         computerResultContainer.appendChild(imageContainer)
-        imageContainer.src = "./img/rock.png"
+        imageContainer.src = "img/rock.png"
     }
 
     if (randomChoice === 'paper') {
         computerResultContainer.appendChild(imageContainer)
-        imageContainer.src = "./img/paper.png"
+        imageContainer.src = "img/paper.png"
     }
 
     if (randomChoice === 'scissors') {
         computerResultContainer.appendChild(imageContainer)
-        imageContainer.src = "./img/scissors.png"
+        imageContainer.src = "img/scissors.png"
     }
 }
 
