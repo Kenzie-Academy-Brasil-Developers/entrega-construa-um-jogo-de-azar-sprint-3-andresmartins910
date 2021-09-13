@@ -5,6 +5,7 @@ const scissors = document.getElementById('scissors')
 const computerRandomChoice = document.getElementById('secret')
 const resultContainer = document.getElementById('resultContainer')
 const computerResultContainer = document.getElementById('computerResultContainer')
+const resetButton = document.getElementById('resetButton')
 
 // get images
 const rockImg = document.getElementById('rockImg')
@@ -15,6 +16,7 @@ const scissorsImg = document.getElementById('scissorsImg')
 rock.addEventListener('click', chooseRock)
 paper.addEventListener('click', choosePaper)
 scissors.addEventListener('click', chooseScissors)
+resetButton.addEventListener('click', resetGame)
 
 // randomize computer result
 const options = ['rock', 'paper', 'scissors']
@@ -77,6 +79,7 @@ function compareResults() {
         paragraph.innerText = 'The game tied!'
         paragraph.id = 'resultTied'
         appendImage()
+        resetButton.style.display = 'block'
     }
 
     if (userChoice === 'rock' && randomChoice === 'paper') {
@@ -84,6 +87,7 @@ function compareResults() {
         paragraph.innerText = 'You lose!'
         paragraph.id = 'resultLose'
         appendImage()
+        resetButton.style.display = 'block'
     }
 
     if (userChoice === 'rock' && randomChoice === 'scissors') {
@@ -91,6 +95,7 @@ function compareResults() {
         paragraph.innerText = 'You win!'
         paragraph.id = 'resultWin'
         appendImage()
+        resetButton.style.display = 'block'
     }
 
     if (userChoice === 'paper' && randomChoice === 'scissors') {
@@ -98,6 +103,7 @@ function compareResults() {
         paragraph.innerText = 'You lose!'
         paragraph.id = 'resultLose'
         appendImage()
+        resetButton.style.display = 'block'
     }
 
     if (userChoice === 'paper' && randomChoice === 'rock') {
@@ -105,6 +111,7 @@ function compareResults() {
         paragraph.innerText = 'You win!'
         paragraph.id = 'resultWin'
         appendImage()
+        resetButton.style.display = 'block'
     }
 
     if (userChoice === 'scissors' && randomChoice === 'rock') {
@@ -112,6 +119,7 @@ function compareResults() {
         paragraph.innerText = 'You lose!'
         paragraph.id = 'resultLose'
         appendImage()
+        resetButton.style.display = 'block'
     }
 
     if (userChoice === 'scissors' && randomChoice === 'paper') {
@@ -119,5 +127,10 @@ function compareResults() {
         paragraph.innerText = 'You win!'
         paragraph.id = 'resultWin'
         appendImage()
+        resetButton.style.display = 'block'
     }
+}
+
+function resetGame() {
+    return window.location.reload();
 }
